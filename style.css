@@ -37,8 +37,7 @@ ul {
 }
 
 img {
-    max-width: 288px;
-    height: 100%;
+    width: 100%;
     margin-bottom: 32px;
 }
 
@@ -102,9 +101,9 @@ button {
 
 .container {
     margin: 0 auto;
-    padding: 0;
-    max-width: 288px;
-    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 100%;
 }
 
 .second-grid .cards-list {
@@ -150,53 +149,51 @@ button {
 
 @media (min-width: 768px) {
     .container {
-        max-width: 680px;
-        width: 100%;
+        max-width: 80%;
     }
 
     h3 {
         margin-bottom: 64px;
     }
-    img {
-        max-width: 680px;
-    }
-
-    .second-grid .card {
-        flex-direction: row;
-        gap: 24px;
-        align-items: center;
-    }
 
     .second-grid img {
         margin: 0;
-        width: 328px;
-        height: 100%;
+    }
+
+    .second-grid .cards-list {
+        margin-bottom: 64px;
+    }
+    .second-grid .card {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: auto auto;
+        align-items: center;
     }
 
     .second-grid .card-title {
         margin-bottom: 16px;
     }
 
-    .second-grid .cards-list {
-        margin-bottom: 64px;
-    }
     .line {
-        margin-bottom: 24px;
+        margin-bottom: 48px;
     }
 
     button {
         width: 216px;
+        margin: 0;
     }
 }
 
 @media (min-width: 1440px) {
     .container {
-        max-width: 1120px;
+        /* max-width: 1120px; */
+        max-width: 80%;
         width: 100%;
     }
 
     h3 {
         font-size: 40px;
+        margin-bottom: 80px;
     }
 
     .first-grid .card-title {
@@ -211,8 +208,8 @@ button {
         gap: 80px 32px;
     }
     .first-grid img {
-        width: 100%;
-        height: 264px;
+        /* width: 100%;
+        height: 264px; */
     }
     .first-grid {
         margin-bottom: 200px;
@@ -225,13 +222,8 @@ button {
     }
 
     .second-grid .card {
-        flex-direction: column;
+        display: flex;
         gap: 32px;
-    }
-
-    .second-grid img {
-        width: 100%;
-        height: 238px;
     }
 
     .line {
@@ -262,8 +254,8 @@ button {
         margin-bottom: 80px;
     }
 
-    .first-grid img {
-        width: 728px;
-        height: 100%;
+    .first-grid .cards-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px 40px;
     }
 }
